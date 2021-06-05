@@ -15,15 +15,28 @@ const ProductCard = ({product})=>{
         borderColor:'gray',
         borderWidth:1,
         padding:5,
-        margin:5,
-        height:450
-    }
+        marginTop: 10,
+        marginBottom: 10,
+        marginLeft: 15,
+        marginRight: 15 
+    };
+    const styleImage = {
+
+          justifyContent: 'center',
+          alignItems: 'center',
+      }
     return(
         <View style={cardStyle}>
-            <Image source={{uri:image}}
-            style={{width:'100%', height:330}}/>
-            <Text >{title}</Text>
+            <View style={styleImage}>
+           
+            <Image style={{width: '60%', height: 250}} source={{uri:image}}/>
+            
+            </View>
+           <View style={{textAlign: 'center', paddingTop: '10'}}>
+               
+            <Text>{title}</Text>
             <Text style={{color:'red',padding:5}}>${price}</Text>
+           </View>
             <Button onPress={()=>handleBuyNow()} title="Buy now" style={{color:'red'}}/>
         </View>
     )

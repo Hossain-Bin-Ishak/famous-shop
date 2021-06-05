@@ -8,7 +8,7 @@ const Navigator = () => {
     }
     return (
         <View style={{backgroundColor:'#bdc3c7',padding:5}}>
-            <Text style={navigatorStyle}>Navigator</Text>
+            <Text style={navigatorStyle}>Menu</Text>
         </View>
     );
 };
